@@ -1,0 +1,11 @@
+{
+	"name": "flip-clock",
+	"version": "1.0.0",
+	"description": "Flip clock screensaver for Windows",
+	"license": "ISC",
+	"author": "Chintan Shah",
+	"main": "main.js",
+	"dependencies": {
+		"jquery": "^3.5.1"
+	}
+}
