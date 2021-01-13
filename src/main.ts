@@ -42,6 +42,7 @@ app.on("ready", () => {
 	mainWindow.loadURL("file://" + __dirname + "/index.html");
 	mainWindow.on("closed", () => {
 		mainWindow = null;
+		if (secondWin) secondWin.close();
 	});
 
 	// Normally we could set show, kiosk, and alwaysOnTop to true in the BrowserWindow options.
@@ -73,6 +74,7 @@ app.on("ready", () => {
 		secondWin.loadURL("file://" + __dirname + "/index.html");
 		secondWin.on("closed", () => {
 			secondWin = null;
+			if (mainWindow) mainWindow.close();
 		});
 
 		setTimeout(() => {
