@@ -7,18 +7,34 @@ body {
 	margin: 0;
 	background-color: #000;
 	overflow: hidden;
-	cursor: none;
+	/* cursor: none; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .hour, .mins {
+	position: relative;
 	width: 40vw;
 	height: 40vw;
 	background-color: #0c0c0c;
 	border-radius: 10%;
 	margin: 1rem;
+	color: white;
+	text-align: center;
+	font-size: 30vw;
+	line-height: 30vw;
+	padding-top: 5vw;
+	box-sizing: border-box;
+}
+
+.ampm {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0 0 2rem 2.5rem;
+	font-size: 2rem;
+	line-height: 2rem;
 }
 
 .separator {
