@@ -5,6 +5,7 @@ const BrowserWindow = electron.BrowserWindow;
 const screen = electron.screen;
 
 var mainWindow: Electron.BrowserWindow = null;
+var secondWin: Electron.BrowserWindow = null;
 
 // Quit when all windows are closed.
 app.on("window-all-closed", () => {
@@ -62,6 +63,22 @@ app.on("ready", () => {
 	});
 
 	if (externalDisplay) {
-		// Show the same stuff here as well
+		secondWin = new BrowserWindow({
+			x: externalDisplay.bounds.x,
+			y: externalDisplay.bounds.y,
+			show: false,
+			autoHideMenuBar: true,
+			webPreferences: { contextIsolation: false, nodeIntegration: true },
+		});
+		secondWin.loadURL("file://" + __dirname + "/index.html");
+		secondWin.on("closed", () => {
+			secondWin = null;
+		});
+
+		setTimeout(() => {
+			secondWin.setKiosk(true);
+			secondWin.setAlwaysOnTop(true);
+			secondWin.show();
+		}, 2000);
 	}
 });
