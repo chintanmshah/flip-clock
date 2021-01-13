@@ -2,6 +2,7 @@ import * as electron from "electron";
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+const screen = electron.screen;
 
 var mainWindow: Electron.BrowserWindow = null;
 
@@ -41,7 +42,6 @@ app.on("ready", () => {
 	mainWindow.on("closed", () => {
 		mainWindow = null;
 	});
-	//mainWindow.webContents.openDevTools();
 
 	// Normally we could set show, kiosk, and alwaysOnTop to true in the BrowserWindow options.
 	// We have to do this after a brief delay so that the CSS cursor:none will take effect
@@ -52,4 +52,16 @@ app.on("ready", () => {
 		mainWindow.setAlwaysOnTop(true);
 		mainWindow.show();
 	}, 2000);
+
+	/**
+	 * Detect external display and replicate the screensaver
+	 */
+	const displays = screen.getAllDisplays();
+	const externalDisplay = displays.find((display) => {
+		return display.bounds.x !== 0 || display.bounds.y !== 0;
+	});
+
+	if (externalDisplay) {
+		// Show the same stuff here as well
+	}
 });

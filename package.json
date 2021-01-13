@@ -4,7 +4,8 @@
 	"description": "Flip clock screensaver for Windows",
 	"scripts": {
 		"build": "grunt",
-		"start": "electron bin"
+		"start": "electron bin",
+		"dev": "grunt && electron bin"
 	},
 	"author": "Chintan Shah",
 	"license": "ISC",
