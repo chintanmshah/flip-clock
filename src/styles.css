@@ -8,4 +8,24 @@ body {
 	background-color: #000;
 	overflow: hidden;
 	cursor: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hour, .mins {
+	width: 40vw;
+	height: 40vw;
+	background-color: #0c0c0c;
+	border-radius: 10%;
+	margin: 1rem;
+}
+
+.separator {
+	position: absolute;
+	left: 0;
+	top: calc(50% - 4px);
+	height: 8px;
+	background-color: #000;
+	width: 100%;
 }
