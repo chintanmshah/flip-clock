@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 
 		copy: {
 			toBin: {
-				files: [{ expand: true, cwd: "src", src: ["index.html", "styles.css", "package.json"], dest: "bin/" }],
+				files: [{ expand: true, cwd: "src", src: ["index.html", "styles.css", "package.json", "BebasNeue-Regular.ttf"], dest: "bin/" }],
 			},
 			toScr: {
 				files: [

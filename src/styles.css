@@ -11,11 +11,16 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: Arial, sans-serif;
-	font-weight: bold;
+	font-family: "Bebas Neue", cursive;
 }
 
-.hour, .mins {
+@font-face {
+	font-family: "Bebas Neue";
+	src: url("BebasNeue-Regular.ttf");
+}
+
+.hour,
+.mins {
 	position: relative;
 	width: 40vw;
 	height: 40vw;
@@ -24,9 +29,8 @@ body {
 	margin: 1rem;
 	color: white;
 	text-align: center;
-	font-size: 30vw;
-	line-height: 30vw;
-	padding-top: 5vw;
+	font-size: 43vw;
+	line-height: 43vw;
 	box-sizing: border-box;
 }
 
@@ -35,8 +39,8 @@ body {
 	bottom: 0;
 	left: 0;
 	margin: 0 0 2rem 2.5rem;
-	font-size: 2rem;
-	line-height: 2rem;
+	font-size: 3rem;
+	line-height: 3rem;
 }
 
 .separator {
