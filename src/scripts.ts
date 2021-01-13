@@ -8,6 +8,11 @@ $(() => {
 async function run() {
 	setupEvents();
 
+	setTime();
+	window.setInterval(() => setTime(), 1000);
+}
+
+function setTime() {
 	let d = new Date();
 	let h = d.getHours();
 	let m = d.getMinutes();
