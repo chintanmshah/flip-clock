@@ -7,7 +7,7 @@ body {
 	margin: 0;
 	background-color: #000;
 	overflow: hidden;
-	/* cursor: none; */
+	cursor: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;

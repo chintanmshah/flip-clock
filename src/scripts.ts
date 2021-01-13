@@ -7,6 +7,21 @@ $(() => {
 
 async function run() {
 	setupEvents();
+
+	let d = new Date();
+	let h = d.getHours();
+	let m = d.getMinutes();
+	let ampm = "AM";
+
+	if (h >= 12) {
+		h -= 12;
+		ampm = "PM";
+	}
+	if (h == 0) h = 12;
+
+	$(".hour .hour-text").text(h);
+	$(".hour .ampm").text(ampm);
+	$(".mins").text(m < 10 ? "0" + m : m);
 }
 
 function setupEvents() {
